@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+  <title>Moskotcho Password Generator</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="Moskotcho Password Generator is open source Password generator service to generate random & secure passwords">
+  <meta name="author" content="WalidAmriou">
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/style_buttons.css">
+  <link rel="icon" href="../img/Logo.jpg" type="image/png" sizes="16x16">
+  <link rel="stylesheet" href="../material_design/material.min.css">
+  
+  <!--<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">-->
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600&display=swap" rel="stylesheet">
+
+  <script src="../material_design/material.min.js"></script>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/language.js" ></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-43599500-3"></script>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-43599500-3');
+  </script>
+
+
+  <script>
+    $(document).ready(function () {
+      //hidden your new password text in the first load
+      document.getElementById("your_new_password_text").style.visibility = "hidden";
+
+      $("#password_generate_button").click(function () {
+        //password text 
+        // 1- empty the text
+        $("p").empty();
+        // 2- generate and put the new password to the text 
+        $("p").text(getpassword());
+
+        // we use a flag call "password_display_flag" to know if there is a new password
+        if (password_display_flag == 1) {
+          //change  "your new password" text color by random 
+          // to help the user see the change 
+          let color_var = '#' + Math.floor(Math.random() * 16777215).toString(16);
+          console.log(color_var);
+          $("#your_new_password_text").css("color", color_var);
+          document.getElementById("your_new_password_text").style.visibility = "visible";
+
+          //opy password to clipboard 
+          copyToClipboard('#password_display');
+        } else {
+          document.getElementById("your_new_password_text").style.visibility = "hidden";
+        }
+
+        //we change the status of password display flag to the 0 or Initial valure
+        password_display_flag = 0;
+
+      });
+    });
+  </script>
+
+
+
+
+
+  <style>
+    body,h1,h2,h3,h4,h5,h6,p,a {
+      font-family: 'Cairo', sans-serif;
+    }
+
+    body,
+    html {
+      color: #212121;
+      background-color: #FAFAFA
+    }
+
+    .bgimg {
+      background-image: url('img/matrix.svg');
+      min-height: 100%;
+      background-repeat: repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    mark {
+      background-color: #94ebee;
+      color: black;
+    }
+
+    #your_new_password_text {
+      color: red;
+    }
+    .mdl-ceckbox{
+      width: 10%;
+    }
+    .mdl-list__item{
+      min-height:65px;
+    }
+  </style>
+</head>
+
+<body style="color: #212121;">
+  
+  <div class="devfast-display-container devfast-animate-opacity devfast-text-white">
+    <div class="devfast-display-topleft devfast-padding-large devfast-xlarge" style="margin: 10px">
+    </div>
+
+    <div class="devfast-display-topright devfast-padding-large devfast-xlarge" style="margin: 10px">
+    </div>
+
+    <br>
+    <center>
+      <div class="devfast-display-middle">
+        <h5 class="devfast-jumbo devfast-animate-top"></h5>
+        <h4 stylecolor="#212121">
+          <img src="../img/icon.svg" width="50px" height="50px" style="background-color: #94ebee;">
+
+          <b>Moskotcho Password Generator</b></h4>
+
+        <h5 id="your_new_password_text" style="font-weight:bold">
+          كلمة سرك الجديدة
+          <span class="mdl-badge" id="password_number_session_badge" data-badge="password_number_session" title="The number of password generated in this session">
+          </span></h5>
+
+        </b>
+        <p class="devfast-large devfast-center" style="color: #B71C1C;max-width: 100%;" id="password_display">
+          <mark>ضع طول كلمة السر ثم إضغط الزر الأزرق لتوليدها</mark>
+        </p>
+
+        <!--Numeric Textfield with Floating Label-->
+        <form action="#">
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="number" pattern="-?[0-9]*(\.[0-9]+)?" id="passl"
+              autocomplete="off">
+            <label class="mdl-textfield__label" for="sample4">طول كلمة السر</label>
+            <span class="mdl-textfield__error">الكائن المدخل ليس رقم</span>
+          </div>
+        </form>
+<!-- 
+        <h6>You want more customize your password? <b onclick="alert('Wait the next update :D')" style="cursor:pointer;">clike here</b></h6>
+-->
+
+        <ul class="mdl-list" style="padding-right: 30%;">
+        <li class="mdl-list__item">
+            <span class="mdl-list__item-primary-content">
+                        
+
+              <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1" id="checkbox56" style="width: 10%;">
+                <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" checked>
+                <span class="mdl-checkbox__label"><b>حروف صغيرة</b> abcdefghijklmnopqrstuvwxyz</span>
+              </label>     
+
+            </span>
+          </li>
+          <li class="mdl-list__item">
+            <span class="mdl-list__item-primary-content">
+
+              <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-2" style="width: 10%;">
+                <input type="checkbox" id="checkbox-2" class="mdl-checkbox__input" checked>
+                <span class="mdl-checkbox__label"><b>حروف كبيرة</b> ABCDEFGHIJKLMNOPQRSTUVWXYZ</span>
+              </label>          
+            
+            </span>
+          </li>
+          <li class="mdl-list__item">
+            <span class="mdl-list__item-primary-content">
+
+
+              <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-3" id="checkbox-1-1" style="width: 10%;">
+                <input type="checkbox" id="checkbox-3" class="mdl-checkbox__input" checked>
+                <span class="mdl-checkbox__label"><b>أرقام</b> 0123456789</span>
+              </label>     
+            
+            </span>
+          </li>
+
+          <li class="mdl-list__item">
+            <span class="mdl-list__item-primary-content">
+
+
+              <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-4" style="width: 10%;">
+                <input type="checkbox" id="checkbox-4" class="mdl-checkbox__input" checked>
+                <span class="mdl-checkbox__label" xmlns="http://www.w3.org/1999/xhtml"><b>رموز</b> !"#$%&amp;'().etc</span>
+              </label>     
+            
+            </span>
+          </li>
+
+        </ul>
+
+        <button id="password_generate_button"
+          class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+          style="border-radius:13px;background-color: blue" >
+          توليد كلمة السر
+        </button>
+        <h6>سيتم نسخ كلمة السر تلقائيا للحافظة بعد التوليد</h6>
+
+        <h6 class="devfast-large devfast-center"><b>تم تطويره من قبل عمريو وليد</b></h6>
+
+        <br>
+        <img src="../img/anim.png" alt="GDG" style="max-width: 100%;"">
+      </div>
+    </center>
+    <div class=" devfast-display-bottomleft devfast-padding-large">
+      </div>
+  </div>
+
+  <footer class="mdl-mega-footer">
+    <div class="mdl-mega-footer__middle-section">
+
+      <div class="mdl-mega-footer__drop-down-section">
+        <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+        <h1 class="mdl-mega-footer__heading">About Project</h1>
+        <ul class="mdl-mega-footer__link-list">
+          <li><a href="#">About</a></li>
+          <li><a href="https://github.com/walidamriou/Moskotcho_Password_Generator/" target="_blank">Source code</a>
+          </li>
+          <li><a href="https://github.com/walidamriou/Moskotcho_Password_Generator/blob/master/LICENSE"
+              target="_blank">License</a></li>
+        </ul>
+      </div>
+
+      <div class="mdl-mega-footer__drop-down-section">
+        <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+        <h1 class="mdl-mega-footer__heading">About developer</h1>
+        <ul class="mdl-mega-footer__link-list">
+          <li><a href="https://www.walidamriou.com" target="_blank">About</a></li>
+          <li><a href="https://github.com/walidamriou" target="_blank">GitHub @walidamriou</a></li>
+          <li><a href="https://twitter.com/walidamriou" target="_blank">Twitter @walidamriou</a></li>
+        </ul>
+      </div>
+
+      <div class="mdl-mega-footer__drop-down-section">
+        <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+        <h1 class="mdl-mega-footer__heading">Version</h1>
+          <mark>Pre-alpha version 0.1 </mark>
+          <br>
+          <b>In the next version:</b> <br>
+          Customize your password<br>
+          Choose Language (English or Arabic)
+      </div>
+
+      <div class="mdl-mega-footer__drop-down-section">
+        <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+        <h1 class="mdl-mega-footer__heading">Moskotcho Password Generator</h1>
+        open source Password generator service to generate random & secure passwords
+      </div>
+    </div>
+
+
+    <div class="mdl-mega-footer__bottom-section">
+      <div class="mdl-logo">Moskotcho Password Generator</div>
+      Walid Amriou 2020
+    </div>
+
+  </footer>
+</body>

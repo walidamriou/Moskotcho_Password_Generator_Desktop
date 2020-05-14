@@ -1,0 +1,16 @@
+{"English": { 
+    "Help_text": "Put the length and click the blue button to get your first password!", 
+
+    "password_length_text_button": "password length",
+    "Input_number_button":"Input is not a number!",
+    "Generate_password_button":"Generate password",
+    
+    "new_password":" Your new password",
+    "You want more customize your password": "You want more customize your password?",
+    "Click_here":"Click here",
+    "clipboard_text":"Your password auto copy to clipboard after generated",
+    "version":"the Pre-alpha version",
+    "Developer_info":"Developed by: Walid Amriou",
+    "put_a_length":"You should put a length!",
+    "put_correct_length":"The length of the password should greater or equal 8"
+}}
