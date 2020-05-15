@@ -7,9 +7,9 @@ To clone and run this repository you'll need [Git](https://git-scm.com) and [Nod
 
 ```bash
 # Clone this repository
-git clone https://github.com/walidamriou/Moskotcho_Password_Generator-Desktop 
+git clone https://github.com/walidamriou/Moskotcho_Password_Generator_Desktop 
 # Go into the repository
-cd Moskotcho_Password_Generator-Desktop
+cd Moskotcho_Password_Generator_Desktop
 # Install dependencies
 npm install --save-dev electron
 # Run the app
