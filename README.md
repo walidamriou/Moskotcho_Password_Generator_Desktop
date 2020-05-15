@@ -3,7 +3,7 @@ Password generator desktop app to generate random &amp; secure passwords
 
 ## To Use
 
-To clone and run this repository you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. and you'll need [ElectronJS](https://www.electronjs.org/docs/tutorial/installation). after that, From your command line:
+To clone and run this repository you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
 
 ```bash
 # Clone this repository
@@ -15,3 +15,7 @@ npm install --save-dev electron
 # Run the app
 npm start
 ```
+
+## Contect me 
+Twitter [@walidamriou](https://twitter.com/walidamriou)
+
