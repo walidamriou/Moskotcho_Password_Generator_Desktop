@@ -16,6 +16,6 @@ npm install --save-dev electron
 npm start
 ```
 
-## Contect me 
+## Contact me 
 Twitter [@walidamriou](https://twitter.com/walidamriou)
 
