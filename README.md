@@ -11,7 +11,7 @@ git clone https://github.com/walidamriou/Moskotcho_Password_Generator-Desktop
 # Go into the repository
 cd Moskotcho_Password_Generator-Desktop
 # Install dependencies
-npm install
+npm install --save-dev electron
 # Run the app
 npm start
 ```
