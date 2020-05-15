@@ -178,7 +178,7 @@ function setcustom(custom,password){
             let position = RandomVar_core(0, password.length);
             password[RandomVar_core(0, password.length)]=custom[index];
         }
-        password = password.join("");
+        //password = password.join("");
     }
     return password;
 }
@@ -211,6 +211,7 @@ function getpassword() {
         console.log("Symbols_input: ",custom);
 
         password = setcustom(custom,passwordarray);
+        password = password.join("");
         console.log("password after custom: ",password);
 
         //print password in the console for test
