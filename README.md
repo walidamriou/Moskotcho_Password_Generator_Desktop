@@ -2,7 +2,7 @@
 Password generator desktop app to generate random &amp; secure passwords 
 
 <p align="center">
-  <img width="50%" height="50%" src="https://github.com/walidamriou/Moskotcho_Password_Generator_Desktop/blob/master/screenshot/2020-06-11-18-36-45.png">
+  <img width="70%" height="70%" src="https://github.com/walidamriou/Moskotcho_Password_Generator_Desktop/blob/master/screenshot/2020-06-11-18-36-45.png">
 </p>
 
 ## To Use
