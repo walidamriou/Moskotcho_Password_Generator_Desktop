@@ -25,14 +25,16 @@
   <title>Moskotcho Password Generator</title>
 
   <script>
-    readJsonFile("https://moskotchopg.walidamriou.com/current_desktop_app_version.json", function(text){
+    //update functions 
+    let current_version = 100;
+    readJsonFile("https://moskotchopg.walidamriou.com/version.json", function(text){
     var data = JSON.parse(text);
     console.log("version");
-    console.log(data[0].current_version);
-    //alert(data[0].current_version);
-    //var elem = document.getElementById("datadisplay");
-    //elem.innerHTML = data.data['id']; //we want to read: "id": "123664" 
-});
+    console.log(data.current_version);
+    if(current_version != data.current_version){
+      alert("You are using old version \n Update your app from \n moskotchopg.walidamriou.com");
+    }});
+
   </script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -146,6 +148,12 @@
       margin-bottom: 40px;
       z-index: 900;
     }
+
+    .alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+}
   </style>
 
   <style>
@@ -301,6 +309,9 @@
     About app
   </a>
 
+<!-- update-->
+
+<!--end update-->
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="js/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
