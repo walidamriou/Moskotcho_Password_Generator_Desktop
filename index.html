@@ -127,6 +127,16 @@
     .mdl-list__item {
       min-height: 65px;
     }
+
+    #About_page {
+      position: fixed;
+      display: block;
+      right: 0;
+      bottom: 0;
+      margin-right: 40px;
+      margin-bottom: 40px;
+      z-index: 900;
+    }
   </style>
 
   <style>
@@ -144,6 +154,8 @@
       <img src="img/icon.svg" width="50px" height="50px" style="background-color: #94ebee;">
       <b>Moskotcho Password Generator</b>
     </h4>
+    <h6> <b>Developed by</b> Walid Amriou </h6>
+<h6>moskotchopg.walidamriou.com</h6>
   </center>
 
 
@@ -268,21 +280,15 @@
 
 </center>
 
-<br>
-
-<h6> <b>Developed by:</b> Walid Amriou </h6>
-<button
-id="open_about"
-class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-style="border-radius:13px;background-color: whitesmoke"
-onclick=" window.open('./about.html','_blank')"
->
-About
-</button> 
-<h6><b>Website:</b>moskotchopg.walidamriou.com</h6>
 
 </div>
   </div>
+
+  <a href="" target="_blank" id="About_page" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color-text--black"
+  style="border-radius:13px;background-color: silver"
+  >
+    About app
+  </a>
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
