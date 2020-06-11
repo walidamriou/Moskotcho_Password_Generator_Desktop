@@ -26,7 +26,7 @@ function createWindow () {
   // This is the actual solution
 mainWindow.webContents.on("new-window", function(event, url) {
   event.preventDefault();
-  5
+  console.log(url)
   if(url==='about.html'){
     const mainWindow2 = new BrowserWindow({
     width: 800,
@@ -38,14 +38,14 @@ mainWindow.webContents.on("new-window", function(event, url) {
     }})
     // and load the index.html of the app.
     mainWindow2.loadFile('./about.html')
-    mainWindow2.setMenuBarVisibility(false)
+    //mainWindow2.setMenuBarVisibility(false)
   }
 
 
   //shell.openExternal(url);
 });
 
-  mainWindow.setMenuBarVisibility(false)
+  //mainWindow.setMenuBarVisibility(false)
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
