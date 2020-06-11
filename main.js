@@ -1,5 +1,10 @@
 // Modules to control application life and create native browser window
 const {app, BrowserWindow} = require('electron')
+
+const nativeImage = require('electron').nativeImage;
+    var image = nativeImage.createFromPath(__dirname + '/img/project_logo.png'); 
+    image.setTemplateImage(true);
+    
 const path = require('path')
 
 function createWindow () {
@@ -9,6 +14,7 @@ function createWindow () {
     width: 800,
     height: 600,
     resizable: false,
+    icon: image,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js')
     }
