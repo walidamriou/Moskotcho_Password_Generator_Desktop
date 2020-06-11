@@ -27,10 +27,14 @@ function createWindow () {
 mainWindow.webContents.on("new-window", function(event, url) {
   event.preventDefault();
   console.log(url)
-  if(url==='about.html'){
+  console.log(__dirname)
+  let input_url1=`file:///${__dirname}/about.html`
+  console.log(input_url1)
+  //url===url bacause I want to make a standard function for all url 
+  if(url===url){
     const mainWindow2 = new BrowserWindow({
-    width: 800,
-    height: 600,
+    width: 600,
+    height: 400,
     resizable: false,
     icon: image,
     webPreferences: {
@@ -38,14 +42,14 @@ mainWindow.webContents.on("new-window", function(event, url) {
     }})
     // and load the index.html of the app.
     mainWindow2.loadFile('./about.html')
-    //mainWindow2.setMenuBarVisibility(false)
+    mainWindow2.setMenuBarVisibility(false)
   }
 
 
   //shell.openExternal(url);
 });
 
-  //mainWindow.setMenuBarVisibility(false)
+  mainWindow.setMenuBarVisibility(false)
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
