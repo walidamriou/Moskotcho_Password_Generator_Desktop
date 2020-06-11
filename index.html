@@ -21,10 +21,19 @@
   <script src="material_design/material.min.js"></script>
   <script src="js/jquery.min.js"></script>
   <script src="js/main.js"></script>
-  <script src="js/language.js"></script>
   <script src="version.js" ></script>
   <title>Moskotcho Password Generator</title>
 
+  <script>
+    readJsonFile("https://moskotchopg.walidamriou.com/current_desktop_app_version.json", function(text){
+    var data = JSON.parse(text);
+    console.log("version");
+    console.log(data[0].current_version);
+    //alert(data[0].current_version);
+    //var elem = document.getElementById("datadisplay");
+    //elem.innerHTML = data.data['id']; //we want to read: "id": "123664" 
+});
+  </script>
   <script>
     window.dataLayer = window.dataLayer || [];
 
