@@ -28,7 +28,7 @@ npm install --save-dev electron
 # Run the app
 npm start
 ```  
-### Make snap from the project  
+### Make .snap from Ubuntu/Linux  
 We use electron-installer-snap to builds a Snap for an already customized Electron app.
 For more details on Snap-specific arguments, see the snapcraft syntax page:
 https://snapcraft.io/docs/build-snaps/syntax
@@ -58,7 +58,22 @@ npm run dist
 
 You will found the .snap in dist folder.
 we use snapcraft upload --release=stable Moskotcho-Password-Generator_1.0.0_amd64.snap to upload it to the snapcraft
-
+### Make macOS setup .dmg from macOS  
+```bash
+# install electron-builder -g 
+sudo npm install electron-builder
+# make dmg file, you will found it in /dist folder 
+npm run dist_mac
+```  
+### Make Windows setup .exe from Ubuntu/Linux
+```bash
+# install electron-builder -g 
+sudo npm install electron-builder
+# Make .exe setup for windows 32 bit
+npm run dist_win32
+#Or Make .exe setup for windows 64 bit
+npm run dist_win64
+```  
 ### Website of the project:  
 https://moskotchopg.walidamriou.com/
 
