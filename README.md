@@ -57,6 +57,7 @@ npm run dist
 ```
 
 You will found the .snap in dist folder.
+we use snapcraft upload --release=stable Moskotcho-Password-Generator_1.0.0_amd64.snap to upload it to the snapcraft
 
 ### Website of the project:  
 https://moskotchopg.walidamriou.com/
