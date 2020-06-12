@@ -16,8 +16,10 @@ function createWindow () {
   // Create the browser window.
   //visitor.pageview("/").send();
   const mainWindow = new BrowserWindow({
+    //width: 800, //best for linux & mac
+    //height: 630, //best for linux & mac
     width: 800,
-    height: 630,
+    height: 650,
     resizable: false,
     icon: image,
     webPreferences: {
