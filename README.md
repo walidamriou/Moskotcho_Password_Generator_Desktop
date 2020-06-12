@@ -6,8 +6,7 @@ Password generator desktop app to generate random &amp; secure passwords
 </p>
 
 ## Install it from Snap store snapcraft  
-Link:
-https://snapcraft.io/moskotcho-password-generator  
+[![Get it from the Snap Store](https://snapcraft.io/static/images/badges/en/snap-store-black.svg)](https://snapcraft.io/moskotcho-password-generator) 
 
 or install it from the terminal by:
 ```bash
