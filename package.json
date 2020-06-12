@@ -1,10 +1,12 @@
 {
-  "name": "Moskotcho_Password_Generator",
+  "name": "Moskotcho-Password-Generator",
   "version": "1.0.0",
-  "description": "open source Password generator app to generate random & secure passwords",
+  "description": "open source app to generate random & secure passwords",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "dist": "electron-builder --linux snap",
+    "dist_win":"electron-builder --win "
   },
   "repository": "https://github.com/walidamriou/Moskotcho_Password_Generator_Desktop",
   "keywords": [
@@ -16,8 +18,19 @@
   ],
   "author": "Walid Amriou",
   "license": "AGPL-3.0",
+  "build": {
+      "icon": "./img/project_logo.png"
+  },
+ 
   "devDependencies": {
     "electron": "^8.2.5",
+    "electron-builder": "^22.7.0",
+    "electron-installer-debian": "^3.0.0",
     "electron-packager": "^14.2.1"
+  },
+  "dependencies": {
+    "electron-json-storage": "^4.1.8",
+    "node-localstorage": "^2.1.6",
+    "universal-analytics": "^0.4.20"
   }
 }

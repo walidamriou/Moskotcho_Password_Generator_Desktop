@@ -1,0 +1,23 @@
+{
+    "options.name":"Moskotcho Password Generator",
+    "options.productName":"Moskotcho Password Generator",
+    "options.genericName":"Moskotcho Password Generator",
+    "options.description":"app to generate random & secure passwords",
+    "options.productDescription":"open source Password generator app to generate random & secure passwords",
+    "options.version":"1.0.0",
+    "options.revision":"1.0.0",
+    "options.section":"utils",
+    "options.maintainer":"Walid Amriou contact@walidamriou.com",
+    "options.homepage":"moskotchopg.walidamriou.com",
+    "options.section":"utils",
+    "options.section":"utils",
+    "dest": "dist/installers/",
+    "icon": "./img/project_logo.png",
+    "Developer":"Walid Amriou"
+    "categories": [
+      "Utility"
+    ],
+    "lintianOverrides": [
+      "changelog-file-missing-in-native-package"
+    ]
+  }
