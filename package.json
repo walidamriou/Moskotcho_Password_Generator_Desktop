@@ -6,7 +6,7 @@
   "scripts": {
     "start": "electron .",
     "dist": "electron-builder --linux snap",
-    "dist_win":"electron-builder --win "
+    "dist_win":"electron-builder --win --ia32 "
   },
   "repository": "https://github.com/walidamriou/Moskotcho_Password_Generator_Desktop",
   "keywords": [

@@ -196,7 +196,7 @@ function getpassword() {
     else {
     password_length = document.getElementById("passl").value;
 
-    if ((password_length >= 8) && (password_length <50)) {
+    if (password_length >= 8) {
         //Create passwordarray[password_length] with all element is =1
         let passwordarray = Array(password_length).fill(1);
         //charge the passwordarray[password_length] by RandomVar
@@ -230,7 +230,7 @@ function getpassword() {
         $("p").text("You should put a length!");
     } else {
         $("p").empty();
-        $("p").text("password should greater or equal 8 and should not greater 50");
+        $("p").text("The length of the password should greater or equal 8");
         //alert("The length of a password should greater or equal 8");
         console.log("The length of a password should greater or equal 8");
     }

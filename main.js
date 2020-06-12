@@ -1,3 +1,8 @@
+var ua = require('universal-analytics');
+
+var visitor = ua('UA-43599500-8');
+
+
 // Modules to control application life and create native browser window
 const {app, shell, BrowserWindow} = require('electron')
 
@@ -9,7 +14,7 @@ const path = require('path')
 
 function createWindow () {
   // Create the browser window.
-
+  //visitor.pageview("/").send();
   const mainWindow = new BrowserWindow({
     width: 800,
     height: 630,
@@ -22,6 +27,13 @@ function createWindow () {
 
   // and load the index.html of the app.
   mainWindow.loadFile('index.html')
+  visitor.pageview("/", function (err) {
+    // Handle the error if necessary.
+    // In case no error is provided you can be sure
+    // the request was successfully sent off to Google.
+    //console.log("send to google analytics");
+    console.log(err);
+  });
 
   // This is the actual solution
 mainWindow.webContents.on("new-window", function(event, url) {
