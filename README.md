@@ -5,9 +5,19 @@ Password generator desktop app to generate random &amp; secure passwords
   <img width="70%" height="70%" src="https://github.com/walidamriou/Moskotcho_Password_Generator_Desktop/blob/master/screenshot/2020-06-11-18-36-45.png">
 </p>
 
-## To Use
+## Install it from Snap store snapcraft  
+Link:
+https://snapcraft.io/moskotcho-password-generator  
+
+or install it from the terminal by:
+```bash
+sudo snap install moskotcho-password-generator
+```
+
+## To develop 
 
 To clone and run this repository you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
+
 
 ```bash
 # Clone this repository
@@ -18,7 +28,36 @@ cd Moskotcho_Password_Generator_Desktop
 npm install --save-dev electron
 # Run the app
 npm start
+```  
+### Make snap from the project  
+We use electron-installer-snap to builds a Snap for an already customized Electron app.
+For more details on Snap-specific arguments, see the snapcraft syntax page:
+https://snapcraft.io/docs/build-snaps/syntax
+
+```bash
+# install electron-installer-snap
+sudo npm install electron-installer-snap -g
+# install electron-builder -g 
+sudo npm install electron-builder
+```  
+Then add to your package.json:
+```bash
+{
+  // ...
+  "scripts": {
+    //..
+        "dist": "electron-builder --linux snap",
+    //..
+  },
+  // ...
+}
+```  
+Then run
 ```
+npm run dist
+```
+
+You will found the .snap in dist folder.
 
 ### Website of the project:  
 https://moskotchopg.walidamriou.com/
@@ -30,6 +69,6 @@ https://moskotchopg.walidamriou.com/
 ### If you need any help or informations:
 :large_blue_circle:	 Facebook: https://www.facebook.com/walidamriou   
 :large_blue_circle:  Twitter: https://twitter.com/walidamriou    
-:red_circle: Email:  contact [at] walidamriou [dot] com    
+:red_circle: Email:  contact [at] walidamriou [dot] com  ```    
 
 
