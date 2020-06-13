@@ -86,4 +86,5 @@ https://moskotchopg.walidamriou.com/
 :large_blue_circle:  Twitter: https://twitter.com/walidamriou    
 :red_circle: Email:  contact [at] walidamriou [dot] com  ```    
 
+### Copyright © 2020 Walid Amriou
 
